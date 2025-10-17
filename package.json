@@ -2,6 +2,7 @@
   "name": "mehfil-artsfest-leaderboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Gpro188.github.io/mehfil-artsfest-leaderboard",
   "dependencies": {
     "firebase": "^10.14.1",
     "react": "^18.2.0",
@@ -15,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prebuild": "echo Preparing build environment..."
   },
   "eslintConfig": {
     "extends": [
