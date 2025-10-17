@@ -22,9 +22,11 @@ export const loadFromLocalStorage = (key, defaultValue = null) => {
 
 // Data migration function for categories
 export const migrateCategories = () => {
+  console.log('Migrating categories...');
   const existingCategories = loadFromLocalStorage('categories');
   
   if (!existingCategories || existingCategories.length === 0) {
+    console.log('Creating default categories...');
     // Create default categories if none exist
     const defaultCategories = [
       { id: 1, name: 'Sub Junior', order: 1 },
@@ -163,10 +165,12 @@ export const calculateTopPerformers = (results) => {
 
 // Initialize default data if not present
 export const initializeDefaultData = () => {
+  console.log('Initializing default data...');
   // Check if we have initialized data already
   const isInitialized = loadFromLocalStorage('initialized', false);
   
   if (!isInitialized) {
+    console.log('Data not initialized, setting up default data...');
     // Initialize categories
     migrateCategories();
     
@@ -205,6 +209,7 @@ export const initializeDefaultData = () => {
       { username: '', password: '', event: '', team: '' }
     ];
     
+    console.log('Saving default data to localStorage...');
     saveToLocalStorage('events', defaultEvents);
     saveToLocalStorage('teams', defaultTeams);
     saveToLocalStorage('programs', defaultPrograms);
@@ -215,5 +220,8 @@ export const initializeDefaultData = () => {
     saveToLocalStorage('teamManagers', defaultTeamManagers); // Initialize empty team managers
     saveToLocalStorage('availableGrades', ['A', 'B', 'C', 'D']);
     saveToLocalStorage('initialized', true);
+    console.log('Default data initialization complete.');
+  } else {
+    console.log('Data already initialized.');
   }
 };
