@@ -63,8 +63,13 @@ function App() {
     };
   }, []);
 
+  // Determine basename for router
+  // For Vercel deployments, we typically don't need a basename
+  // But we'll set it to empty string to be explicit
+  const basename = '';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <AppContainer theme={theme}>
         <Routes>
           <Route path="/" element={<PublicView />} />
