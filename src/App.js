@@ -8,6 +8,9 @@ import TeamManagerLogin from './components/TeamManagerLogin';
 import TeamManagerDashboard from './components/TeamManagerDashboard';
 import { initializeDefaultData, loadFromLocalStorage } from './utils/dataStorage';
 
+// Add a simple console log to verify the app is loading
+console.log('App component loading');
+
 // Load theme from localStorage or use default
 const getStoredTheme = () => {
   const savedTheme = loadFromLocalStorage('appTheme', {

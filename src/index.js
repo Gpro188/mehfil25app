@@ -5,6 +5,9 @@ import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Add a simple console log to verify the index file is loading
+console.log('Index file loading');
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

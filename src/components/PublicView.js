@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { loadFromLocalStorage, calculateTeamStandings, calculateTopPerformers } from '../utils/dataStorage';
 import Logo from './Logo';
 
+// Add a simple console log to verify the component is loading
+console.log('PublicView component loading');
+
 // Welcome animation keyframes
 const fadeIn = keyframes`
   0% {
