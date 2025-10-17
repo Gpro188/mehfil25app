@@ -13,8 +13,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "postinstall": "npx react-scripts --version",
     "start": "react-scripts start",
-    "build": "node node_modules/react-scripts/bin/react-scripts.js build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
