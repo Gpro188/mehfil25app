@@ -46,6 +46,19 @@ const PublicViewContainer = styled.div`
   padding: 20px;
   color: white;
   min-height: 100vh;
+  
+  // Add a simple visual indicator that the component is rendering
+  &:before {
+    content: "PublicView Component Loaded";
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 9999;
+  }
 `;
 
 const WelcomeOverlay = styled.div`
