@@ -7,6 +7,7 @@ import AdminLogin from './components/AdminLogin';
 import TeamManagerLogin from './components/TeamManagerLogin';
 import TeamManagerDashboard from './components/TeamManagerDashboard';
 import { initializeDefaultData, loadFromLocalStorage } from './utils/dataStorage';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Add a simple console log to verify the app is loading
 console.log('App component loading');
@@ -45,7 +46,9 @@ function App() {
   
   useEffect(() => {
     // Initialize default data when app starts
+    console.log('Initializing default data...');
     initializeDefaultData();
+    console.log('Default data initialization complete.');
     
     // Listen for theme changes in localStorage
     const handleStorageChange = (e) => {
@@ -72,25 +75,27 @@ function App() {
   const basename = '';
 
   return (
-    <Router basename={basename}>
-      <AppContainer theme={theme}>
-        <Routes>
-          <Route path="/" element={<PublicView />} />
-          <Route path="/admin/login" element={<AdminLogin />} />
-          <Route path="/admin" element={
-            <AdminRoute>
-              <AdminDashboard />
-            </AdminRoute>
-          } />
-          <Route path="/team-manager-login" element={<TeamManagerLogin />} />
-          <Route path="/team-manager" element={
-            <TeamManagerRoute>
-              <TeamManagerDashboard />
-            </TeamManagerRoute>
-          } />
-        </Routes>
-      </AppContainer>
-    </Router>
+    <ErrorBoundary>
+      <Router basename={basename}>
+        <AppContainer theme={theme}>
+          <Routes>
+            <Route path="/" element={<PublicView />} />
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin" element={
+              <AdminRoute>
+                <AdminDashboard />
+              </AdminRoute>
+            } />
+            <Route path="/team-manager-login" element={<TeamManagerLogin />} />
+            <Route path="/team-manager" element={
+              <TeamManagerRoute>
+                <TeamManagerDashboard />
+              </TeamManagerRoute>
+            } />
+          </Routes>
+        </AppContainer>
+      </Router>
+    </ErrorBoundary>
   );
 }
 
