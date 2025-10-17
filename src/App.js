@@ -70,9 +70,8 @@ function App() {
   }, []);
 
   // Determine basename for router
-  // For Vercel deployments, we typically don't need a basename
-  // But we'll set it to empty string to be explicit
-  const basename = '';
+  // For Vercel deployments, we use the environment variable or default to empty string
+  const basename = process.env.PUBLIC_URL || '';
 
   return (
     <ErrorBoundary>
@@ -92,6 +91,8 @@ function App() {
                 <TeamManagerDashboard />
               </TeamManagerRoute>
             } />
+            {/* Catch-all route for SPA functionality on Vercel */}
+            <Route path="*" element={<PublicView />} />
           </Routes>
         </AppContainer>
       </Router>
