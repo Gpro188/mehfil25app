@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mehfil-artsfest-leaderboard/static/css/main.d8e6b2ac.css",
-    "main.js": "/mehfil-artsfest-leaderboard/static/js/main.7b3d268c.js",
-    "static/js/453.7d87c48f.chunk.js": "/mehfil-artsfest-leaderboard/static/js/453.7d87c48f.chunk.js",
-    "index.html": "/mehfil-artsfest-leaderboard/index.html",
-    "main.d8e6b2ac.css.map": "/mehfil-artsfest-leaderboard/static/css/main.d8e6b2ac.css.map",
-    "main.7b3d268c.js.map": "/mehfil-artsfest-leaderboard/static/js/main.7b3d268c.js.map",
-    "453.7d87c48f.chunk.js.map": "/mehfil-artsfest-leaderboard/static/js/453.7d87c48f.chunk.js.map"
+    "main.css": "/mehfil25app/static/css/main.d8e6b2ac.css",
+    "main.js": "/mehfil25app/static/js/main.852f202e.js",
+    "static/js/453.7d87c48f.chunk.js": "/mehfil25app/static/js/453.7d87c48f.chunk.js",
+    "index.html": "/mehfil25app/index.html",
+    "main.d8e6b2ac.css.map": "/mehfil25app/static/css/main.d8e6b2ac.css.map",
+    "main.852f202e.js.map": "/mehfil25app/static/js/main.852f202e.js.map",
+    "453.7d87c48f.chunk.js.map": "/mehfil25app/static/js/453.7d87c48f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d8e6b2ac.css",
-    "static/js/main.7b3d268c.js"
+    "static/js/main.852f202e.js"
   ]
 }
